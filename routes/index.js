@@ -44,12 +44,12 @@ router.post('/login', async function(req, res, next){
 } 
 });
 
-router.post('/findShop', async function (req, res, next) {
- let name = req.body.shop;
-  let listSelectShop = await selectBoxShop();
-  var tableProduct = await getTableSelectProduct(name);
-  res.render('admin', {Title:'Admin',selectBox: listSelectShop, result: tableProduct})
-});
+// router.post('/findShop', async function (req, res, next) {
+//  let name = req.body.shop;
+//   let listSelectShop = await selectBoxShop();
+//   var tableProduct = await getTableSelectProduct(name);
+//   res.render('admin', {Title:'Admin',selectBox: listSelectShop, result: tableProduct})
+// });
 
 router.post('/button', async function(req, res, next){
   var action = req.body.button;

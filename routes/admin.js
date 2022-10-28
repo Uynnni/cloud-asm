@@ -17,4 +17,12 @@ router.get('/', async function(req, res, next) {
    }
 });
 
+router.post('/findShop', async function (req, res, next) {
+    let username = req.session.user.username;
+ let name = req.body.shop;
+  let listSelectShop = await selectBoxShop();
+  var tableProduct = await getTableSelectProduct(name);
+  res.render('admin',{selectBox: listSelectShop,result: tableProduct,name: username});
+});
+
 module.exports = router;

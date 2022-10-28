@@ -12,7 +12,7 @@ async function viewShop() {
   }
   select_box_string += `</select>`;
   var form_select_box = `
-    <form method="POST" action="/findShop"> 
+    <form method="post" action="/admin/findShop"> 
     ${select_box_string}
     <button type="submit"> Search </button>
     </form>`
